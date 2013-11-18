@@ -1,4 +1,4 @@
-HTML-CSS-basico
-===============
+Ejemplos básicos de HTML y CSS
+=============================================
 
-Ejemplos para tutotial básico de HTML y CSS
+Ejemplos para tutorial básico de HTML y CSS. 
