@@ -5,11 +5,11 @@
  */
 
 	if ( ! empty($_POST)) {
-		echo '<pre>' .print_r($_POST, true) . '</pre>';
+		echo '<pre>Se ha enviado por post<br> ' .print_r($_POST, true) . '</pre>';
 	}
 
 	if ( ! empty($_GET)) {
-		echo '<pre>' . print_r($_GET, true) . '</pre>';
+		echo '<pre>Se ha enviado por get<br> ' . print_r($_GET, true) . '</pre>';
 	}	
 
 
