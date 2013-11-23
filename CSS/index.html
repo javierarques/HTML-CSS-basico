@@ -4,77 +4,23 @@
 <head>
     <title>CSS básico - Índice</title>
     <meta charset="utf-8">
-
-    <style type="text/css" media="screen">
-
-    /* Fuentes */
-	@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
-
-	/* General*/
-
-	*{	
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-	}
-	html{
-		height: 100%;
-	}
-    body {
-    	font-size: 120%;
-        font-family: Lato, sans-serif;
-        font-weight: 400;
-		margin: 0;
-		padding: 0;
-		border: 10px solis #FFF;
-
-
-        /* Radial BG*/
-		background-image: -webkit-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
-		background-image: -moz-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
-		background-image: -ms-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
-		background-image: -o-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
-		background-image: radial-gradient(farthest-side at right bottom, #8286f3 0%, #ff80fc 100%);
-
-
-    }
-    h1 {
-        font-size: 15rem;
-        font-weight: 100;
-        color: #FFF;
-        text-shadow: 3px 3px 0px #FF80FC;
-        margin: 0 0 1rem 0;
-    }
-    ul, ol{
-    	list-style: none;
-    }
-    a{
-    	color: #FFF;
-    }
-
-    /* Estilos */
-    .main{
-		font-size: 1.5rem;
-		width: 500px;
-		text-align: center;
-		margin: 0 auto;
-		padding: 3rem 0;
-    }
-
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="main">
-        <h1>CSS</h1>
+        <h1 class="animated fadeInDown">CSS <br>básico</h1>
         <nav class="main-nan">
-            <ul>
+            <ul class="animated fadeInUp delay10">
                 <li><a href="01.html">Incluir CSS</a>
                 </li>
-
+                <li><a href="01.html">Incluir CSS</a>
+                </li>
             </ul>
-        </nav><!-- main nav -->
-    </div> <!-- main -->
+        </nav>
+        <!-- main nav -->
+    </div>
+    <!-- main -->
 
 </body>
 

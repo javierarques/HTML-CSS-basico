@@ -1,0 +1,167 @@
+/* ==========================================================================
+   ESTILOS DEL INDEX DE CSS
+   ========================================================================== */
+
+/* 
+      GENERAL
+      ========================================================================== */
+
+/* Fuentes */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+/* Etiquetas */
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 120%;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  border: 10px solis #FFF;
+  /* Radial BG*/
+  background-image: -webkit-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
+  background-image: -webkit-radial-gradient(farthest-side at right bottom, #8286f3 0%, #ff80fc 100%);
+  background-image: radial-gradient(farthest-side at right bottom, #8286f3 0%, #ff80fc 100%);
+}
+
+ul,
+ol {
+  margin: 2rem 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 0;
+  border-bottom: 1px solid #FF80FC;
+  margin: 0 0 1rem 0;
+  padding: 1rem 0;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 
+   General
+   ========================================================================== */
+
+.main {
+  font-size: 1.5rem;
+  width: 500px;
+  text-align: center;
+  margin: 9% auto;
+  display: block;
+}
+
+.main h1 {
+  font-weight: 100;
+  color: #FFF;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+  line-height: 250%;
+}
+
+.main h1:first-line {
+  font-size: 15rem;
+  font-style: normal;
+  text-shadow: 3px 3px 0px #FF80FC;
+}
+
+/* 
+       ANIMATIONS
+       ========================================================================== */
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.delay10 {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
