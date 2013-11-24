@@ -3,8 +3,8 @@
    ========================================================================== */
 
 /* 
-      GENERAL
-      ========================================================================== */
+  GENERAL
+  ========================================================================== */
 
 /* Fuentes */
 
@@ -38,11 +38,12 @@ ul,
 ol {
   margin: 2rem 0;
   list-style: none;
+  padding: 0;
 }
 
 ul li {
   margin: 0;
-  border-bottom: 1px solid #FF80FC;
+  padding: 0;
   margin: 0 0 1rem 0;
   padding: 1rem 0;
 }
@@ -62,9 +63,9 @@ a:hover {
 
 .main {
   font-size: 1.5rem;
-  width: 500px;
+  width: 60%;
   text-align: center;
-  margin: 9% auto;
+  margin: 3% auto;
   display: block;
 }
 
@@ -73,30 +74,52 @@ a:hover {
   color: #FFF;
   margin: 0 0 1rem 0;
   font-style: italic;
-  line-height: 250%;
 }
 
 .main h1:first-line {
   font-size: 15rem;
   font-style: normal;
+  margin-bottom: 1em;
   text-shadow: 3px 3px 0px #FF80FC;
+  line-height: 100%;
+}
+
+/* Lista */
+
+.main ul {
+  background: #FFF;
+  border: 1px solid #FF80FC;
+}
+
+.main li {
+  border-bottom: 1px solid #FF80FC;
+  margin: 0;
+  padding: 0;
+}
+
+.main li a {
+  color: #FF80FC;
+  display: block;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.main li a:hover {
+  background-color: #FF80FC;
+  color: #FFF;
+  text-decoration: none;
 }
 
 /* 
-       ANIMATIONS
-       ========================================================================== */
+   ANIMATIONS
+   ========================================================================== */
 
 .animated {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
 }
 
 @-webkit-keyframes fadeInDown {
