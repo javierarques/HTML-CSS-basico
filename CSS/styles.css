@@ -6,13 +6,26 @@
 /* ==========================================================================
    PRUEBAS - ESTO ES UNA SECCIÓN
    ========================================================================== */
+article{
+	width: 50%;
+}   
  p {
+ 	width: 50%;
     color: white;
     font-family: Arial;
     text-transform: uppercase;
     background: grey;
 }
-
-/* 
-   Esto es una subsección
-   ========================================================================== */
+a{
+	color: yellow;
+	text-decoration: underline;
+}
+body{
+	background: green;
+}
+article{
+	margin-bottom: 2em;
+}
+img{
+	border: none;
+}
