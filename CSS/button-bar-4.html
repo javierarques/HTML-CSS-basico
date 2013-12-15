@@ -9,6 +9,12 @@
 .navbar {
   background-color: #e3e3e3;
   padding: 10px;
+}
+
+.navbar:after{
+  content: '';
+  display: block; 
+  clear: both;
   overflow: hidden;
 }
 
@@ -30,6 +36,8 @@
   text-decoration: none;
 
   border: 1px solid black;
+  background-image: url(sprite.png);
+
 }
 
 .navbar .share {
@@ -42,9 +50,7 @@
   white-space: nowrap;
 }
 
-.inbox          { 
-  background-image: linear-gradient(#28A8B9, #037A8A);
-}
+.inbox          { background-position:    0   0;}
 .inbox:hover    { background-position: -300px 0;}
 .inbox:active   { background-position: -600px 0;}
 
@@ -57,11 +63,21 @@
 .trash:active   { background-position: -800px 0;}
 
 .share          { 
-  background-image: url(sprite.png);
-  background-position: -900px 0;}
-.share:hover    { background-position: -950px 0;}
+  background-position: -900px 0;
+}
+.share:hover    { 
+  background-position: -950px 0;
+  animation:myfirst .5s;
+  animation-timing-function: ease;
+}
 
-.button-bar > a:hover:after {
+@keyframes myfirst
+{
+0%   { transform: scale(1); }
+75%  { transform: scale(2); }
+100% { transform: scale(1); }
+}
+.button-bar > a:after{
   content: attr(data-badge);
 
   position: absolute;
@@ -78,14 +94,38 @@
 
   border: 2px solid #333;
   border-radius: 50%; /* CSS3 stuff, do not worry about it now */
+  opacity: 0;
+
+  transform: scale(0);
+  transform:translateY(-25px);
+
+
+
+-webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
+-webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+   -moz-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+     -o-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+        transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+     -o-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+        transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */ 
+}
+
+.button-bar > a:hover:after {
+  opacity: 1;
+  transform: scale(1);
+  transform:translateY(0px);
 }
 	</style>
 </head>
 <body>
 
 <div class="main">
-	<h3>Button Bar 3</h3>
-	<p>Gradients</p>
+	<h3>Button Bar 4</h3>
+	<p>Animations and transitions</p>
 	
 	<div class="navbar">
 	
