@@ -4,138 +4,25 @@
 	<meta charset="utf-8">
 	<title>Button bar 4</title>
 	<link rel="stylesheet" href="index.css">
-
+  <link rel="stylesheet" href="css/button-bar-4.css">
 	<style>
-.navbar {
-  background-color: #e3e3e3;
-  padding: 10px;
-}
-
-.navbar:after{
-  content: '';
-  display: block; 
-  clear: both;
-  overflow: hidden;
-}
-
-.navbar a {
-  float: left;
-
-  position: relative;
-
-  width: 100px;
-  height: 50px;
-  margin: auto 10px;
-
-  text-align: center;
-  line-height: 50px;
-
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-
-  border: 1px solid black;
-  background-image: url(sprite.png);
-
-}
-
-.navbar .share {
-  float: right;
-  width: 50px;
-  border: none;
-
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.inbox          { background-position:    0   0;}
-.inbox:hover    { background-position: -300px 0;}
-.inbox:active   { background-position: -600px 0;}
-
-.outbox         { background-position: -100px 0;}
-.outbox:hover   { background-position: -400px 0;}
-.outbox:active  { background-position: -700px 0;}
-
-.trash          { background-position: -200px 0;}
-.trash:hover    { background-position: -500px 0;}
-.trash:active   { background-position: -800px 0;}
-
-.share          { 
-  background-position: -900px 0;
-}
-.share:hover    { 
-  background-position: -950px 0;
-  animation:myfirst .5s;
-  animation-timing-function: ease;
-}
-
-@keyframes myfirst
-{
-0%   { transform: scale(1); }
-75%  { transform: scale(2); }
-100% { transform: scale(1); }
-}
-.button-bar > a:after{
-  content: attr(data-badge);
-
-  position: absolute;
-  top: -10px;
-  right: 5px;
-
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 15px;
-
-  background-color: #ddd;
-  color: black;
-
-  border: 2px solid #333;
-  border-radius: 50%; /* CSS3 stuff, do not worry about it now */
-  opacity: 0;
-
-  transform: scale(0);
-  transform:translateY(-25px);
-
-
-
--webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
--webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-   -moz-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-     -o-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-        transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */
-
--webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
--webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-   -moz-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-     -o-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
-        transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */ 
-}
-
-.button-bar > a:hover:after {
-  opacity: 1;
-  transform: scale(1);
-  transform:translateY(0px);
-}
 	</style>
 </head>
 <body>
 
 <div class="main">
 	<h3>Button Bar 4</h3>
-	<p>Animations and transitions</p>
+	<p>@font-face & icon-fonts</p>
 	
 	<div class="navbar">
 	
 	  <div class="button-bar">
-	    <a href="#" data-badge="10" class="inbox">Inbox</a>
-	    <a href="#" data-badge="5" class="outbox">Outbox</a>
-	    <a href="#" data-badge="21" class="trash">Trash</a>
+	    <a href="#" data-badge="10" class="inbox">Inbox <i class="icon-box-add"></i></a>
+	    <a href="#" data-badge="5" class="outbox">Outbox <i class="icon-box-remove"></i></a>
+	    <a href="#" data-badge="21" class="trash">Trash <i class="icon-remove"></i></a>
 	  </div>
 	
-	  <a href="#" class="share">Share</a>
+	  <a href="#" class="share"><i class="icon-share"></i></a>
 	
 	</div>
 </div>

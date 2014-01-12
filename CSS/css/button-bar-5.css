@@ -1,0 +1,122 @@
+/**
+ *  Button Bar 5 LAB
+ *  Transitions & animations
+ */
+
+.navbar {
+  background-color: #e3e3e3;
+  padding: 10px;
+}
+
+.navbar:after{
+  content: '';
+  display: block; 
+  clear: both;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+
+  position: relative;
+
+  width: 100px;
+  height: 50px;
+  margin: auto 10px;
+
+  text-align: center;
+  line-height: 50px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+  border: 1px solid black;
+  background-image: url(../img/sprite.png);
+
+}
+
+.navbar .share {
+  float: right;
+  width: 50px;
+  border: none;
+
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.inbox          { background-position:    0   0;}
+.inbox:hover    { background-position: -300px 0;}
+.inbox:active   { background-position: -600px 0;}
+
+.outbox         { background-position: -100px 0;}
+.outbox:hover   { background-position: -400px 0;}
+.outbox:active  { background-position: -700px 0;}
+
+.trash          { background-position: -200px 0;}
+.trash:hover    { background-position: -500px 0;}
+.trash:active   { background-position: -800px 0;}
+
+.share          { 
+  background-position: -900px 0;
+}
+.share:hover    { 
+  background-position: -950px 0;
+  -webkit-animation:myfirst .5s;
+  animation:myfirst .5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+@-webkit-keyframes myfirst
+{
+0%   { -webkit-transform: scale(1); transform: scale(1); }
+75%  { -webkit-transform: scale(2); transform: scale(2); }
+100% { -webkit-transform: scale(1); transform: scale(1); }
+}
+
+@keyframes myfirst
+{
+0%   { -webkit-transform: scale(1); transform: scale(1); }
+75%  { -webkit-transform: scale(2); transform: scale(2); }
+100% { -webkit-transform: scale(1); transform: scale(1); }
+}
+.button-bar > a:after{
+  content: attr(data-badge);
+
+  position: absolute;
+  top: -10px;
+  right: 5px;
+
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 15px;
+
+  background-color: #ddd;
+  color: black;
+
+  border: 2px solid #333;
+  border-radius: 50%; /* CSS3 stuff, do not worry about it now */
+  opacity: 0;
+
+  -webkit-transform: scale(0) translate(0, -25px);
+  transform: scale(0) translate(0, -25px);
+
+
+-webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
+-webkit-transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+        transition: all 500ms cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); 
+        transition-timing-function: cubic-bezier(0.000, 0.555, 0.260, 1.455); /* custom */ 
+}
+
+.button-bar > a:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1) translate(0px, 0px);
+  transform: scale(1) translate(0px, 0px);
+}
