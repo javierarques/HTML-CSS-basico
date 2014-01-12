@@ -106,11 +106,55 @@ a:hover {
   transition: all 0.3s ease-out;
 }
 
-.main li a:hover {
+.main li a:hover, .main li a:hover small{
   background-color: #FF80FC;
   color: #FFF;
   text-decoration: none;
 }
+
+.main li a small{
+  color: #CCC;
+  display: block;
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 8px;
+  font-style: italic;
+  background: transparent;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* 
+   DESCRIPTION BOX
+   ========================================================================== */
+
+.description{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+  padding: 1em 1.5em;
+  font-size: 80%;
+  text-align: left;
+  background: #FFF;
+  border: 1px solid #FF80FC;
+}
+.description p{
+  margin: 0 0 .5em 0;
+}
+.description ul{
+  margin: 0;
+}
+.description ul li{
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+.description a{
+  color: #FF80FC;
+}
+
+
 
 /* 
    ANIMATIONS
